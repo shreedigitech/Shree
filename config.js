@@ -4,7 +4,7 @@ window.FV_CONFIG = {
   city: 'Buldhana',
   state: 'Maharashtra',
   country: 'India',
-  adminEmail: 'lovebyhack@gmail.com',
+  adminEmail: 'shreedigitech.in@gmail.com',
   adminWhatsApp: '919890590237',
   deliveryFee: 30,
   freeDeliveryMin: 500,
