@@ -4,8 +4,8 @@ window.FV_CONFIG = {
   city: 'Buldhana',
   state: 'Maharashtra',
   country: 'India',
-  adminEmail: 'YOUR_ADMIN_GMAIL@gmail.com',
-  adminWhatsApp: '91XXXXXXXXXX',
+  adminEmail: 'lovebyhack@gmail.com',
+  adminWhatsApp: '919890590237',
   deliveryFee: 30,
   freeDeliveryMin: 500,
   codLimit: 499.99,
@@ -35,5 +35,5 @@ window.FV_CONFIG = {
   razorpayTestMode: true,
 
   // Demo-only manager PIN. Replace with Firebase Authentication before production.
-  managerDemoPin: '2580'
+  managerDemoPin: '9890'
 };
