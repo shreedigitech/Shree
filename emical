@@ -1,0 +1,2706 @@
+
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <!-- =========================================================
+         BASIC SEO
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b1118">
+
+    <title>
+        EMI Calculator India – Loan EMI, Interest, Prepayment & Foreclosure Calculator
+    </title>
+
+    <meta name="description"
+          content="Free EMI Calculator India. Calculate loan EMI, total interest, principal, outstanding balance, amortization schedule, prepayment savings and foreclosure amount. Compare flat rate vs reducing balance interest.">
+
+    <meta name="keywords"
+          content="EMI calculator, EMI calculator India, loan EMI calculator, personal loan EMI calculator, loan interest calculator, EMI interest calculator, reducing balance EMI calculator, flat rate EMI calculator, flat vs reducing interest calculator, loan prepayment calculator, loan foreclosure calculator, loan amortization calculator, EMI amortization schedule, loan outstanding calculator, personal loan prepayment calculator, foreclosure amount calculator, interest saving calculator">
+
+    <meta name="robots"
+          content="index, follow, max-image-preview:large">
+
+    <meta name="author"
+          content="EMI Loan Calculator">
+
+    <link rel="canonical"
+          href="https://shreedigitech.github.io/Shree/emical">
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title"
+          content="EMI Calculator India – Loan EMI & Interest Calculator">
+
+    <meta property="og:description"
+          content="Calculate EMI, total interest, loan outstanding, prepayment savings and foreclosure amount. Compare flat and reducing interest rates.">
+
+    <meta property="og:url"
+          content="https://yourdomain.com/emi-calculator/">
+
+    <meta property="og:site_name"
+          content="EMI Loan Calculator">
+
+
+    <!-- =========================================================
+         TWITTER
+    ========================================================== -->
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title"
+          content="EMI Calculator India">
+
+    <meta name="twitter:description"
+          content="Free EMI, loan interest, prepayment and foreclosure calculator for India.">
+
+
+    <!-- =========================================================
+         FONTS
+         No external font required = faster loading.
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                #081018;
+
+            color:
+                #e9f1f5;
+
+            line-height:
+                1.6;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           LAYOUT
+        ====================================================== */
+
+        .container {
+            width: min(1180px, 94%);
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+            padding: 35px 0 25px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 30px;
+            background: #10232b;
+            border: 1px solid #245260;
+            color: #7ed9e8;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 46px);
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .hero-text {
+            max-width: 760px;
+            margin: auto;
+            color: #9eb0bc;
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           CARDS
+        ====================================================== */
+
+        .card {
+            background: #101a23;
+            border: 1px solid #263742;
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow:
+                0 12px 35px rgba(0,0,0,.18);
+        }
+
+        .card h2 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .card-description {
+            color: #8fa2ae;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ====================================================== */
+
+        .form-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+        .field label {
+            display: block;
+            color: #a9bac4;
+            font-size: 13px;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        input,
+        select {
+            width: 100%;
+            background: #091219;
+            color: white;
+            border: 1px solid #30424e;
+            border-radius: 10px;
+            padding: 13px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #6dd2e1;
+            box-shadow:
+                0 0 0 2px rgba(109,210,225,.08);
+        }
+
+        .help {
+            display: block;
+            color: #718590;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ====================================================== */
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        button {
+            border: 0;
+            padding: 13px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #62c8d9;
+            color: #061015;
+        }
+
+        button:hover {
+            filter: brightness(1.08);
+        }
+
+        .secondary {
+            background: #263743;
+            color: white;
+        }
+
+
+        /* =====================================================
+           RESULT CARDS
+        ====================================================== */
+
+        .results-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .result {
+            background: #0a131a;
+            border: 1px solid #273945;
+            border-radius: 13px;
+            padding: 17px;
+        }
+
+        .result-label {
+            color: #80949f;
+            font-size: 12px;
+        }
+
+        .result-value {
+            font-size: 21px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .small-result {
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT
+        ====================================================== */
+
+        .notice {
+            margin-top: 18px;
+            padding: 15px;
+            border-left: 4px solid #65cada;
+            background: #0c1c23;
+            border-radius: 8px;
+            color: #bdd0d8;
+        }
+
+
+        /* =====================================================
+           COMPARISON
+        ====================================================== */
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .comparison-box {
+            padding: 20px;
+            border-radius: 14px;
+            background: #0a131a;
+            border: 1px solid #293b47;
+        }
+
+        .comparison-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .comparison-box p {
+            color: #9aacb6;
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           TABLE
+        ====================================================== */
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #263742;
+        }
+
+        table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 11px;
+            border-bottom: 1px solid #263742;
+            font-size: 12px;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #101d26;
+            color: #a9c1ca;
+            position: sticky;
+            top: 0;
+        }
+
+        th:first-child,
+        td:first-child {
+            text-align: center;
+        }
+
+        tr:hover td {
+            background: #0e1921;
+        }
+
+
+        /* =====================================================
+           INFO CONTENT
+        ====================================================== */
+
+        .article {
+            color: #b3c1c9;
+            font-size: 15px;
+        }
+
+        .article h2 {
+            color: white;
+            margin:
+                25px 0 10px;
+        }
+
+        .article h3 {
+            color: #d8e5ea;
+            margin:
+                20px 0 8px;
+        }
+
+        .article p {
+            margin-bottom: 13px;
+        }
+
+        .article ul {
+            padding-left: 22px;
+            margin-bottom: 15px;
+        }
+
+        .article li {
+            margin-bottom: 7px;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        details {
+            border-bottom: 1px solid #283a45;
+            padding: 14px 0;
+        }
+
+        details:last-child {
+            border-bottom: 0;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #e5eef2;
+        }
+
+        details p {
+            color: #98abb5;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            text-align: center;
+            color: #647983;
+            padding:
+                25px 10px 40px;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media(max-width:900px) {
+
+            .form-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .results-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .container {
+                width: 94%;
+            }
+
+            header {
+                padding-top: 25px;
+            }
+
+            .form-grid,
+            .results-grid,
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 17px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .button-row button {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+    ========================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EMI Calculator India",
+        "url": "https://yourdomain.com/emi-calculator/",
+        "description": "Free EMI calculator for calculating loan EMI, interest, amortization, prepayment savings and foreclosure amount.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+        }
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://yourdomain.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "EMI Calculator",
+                "item": "https://yourdomain.com/emi-calculator/"
+            }
+        ]
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an EMI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "EMI means Equated Monthly Instalment. It is the regular amount paid toward a loan, generally consisting of principal and interest."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is reducing balance interest?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Under reducing balance interest, interest is calculated on the outstanding principal. As the principal decreases, the interest component generally decreases."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is flat rate interest?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Under a typical flat-rate calculation, interest is calculated using the original principal rather than the declining outstanding balance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does loan prepayment save interest?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For a reducing-balance loan, reducing the outstanding principal earlier can reduce future interest, subject to lender rules and applicable charges."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is loan foreclosure?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Loan foreclosure means closing a loan before its scheduled maturity by paying the eligible outstanding amount and applicable charges."
+                }
+            }
+        ]
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+
+    <header>
+
+        <div class="badge">
+            FREE • INDIA • NO LOGIN REQUIRED
+        </div>
+
+        <h1>
+            EMI Calculator India
+        </h1>
+
+        <p class="hero-text">
+            Calculate your monthly EMI, total interest, principal,
+            outstanding loan balance, amortization schedule,
+            prepayment savings and foreclosure amount.
+            Compare flat-rate and reducing-balance interest.
+        </p>
+
+    </header>
+
+
+    <!-- =======================================================
+         MAIN CALCULATOR
+    ======================================================== -->
+
+    <main>
+
+        <section class="card">
+
+            <h2>
+                Loan EMI Calculator
+            </h2>
+
+            <p class="card-description">
+                Enter your loan amount, interest rate and tenure to
+                calculate your estimated EMI and complete repayment details.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label for="loanAmount">
+                        Loan Amount (₹)
+                    </label>
+
+                    <input
+                        id="loanAmount"
+                        type="number"
+                        min="0"
+                        step="100"
+                        value="408285"
+                    >
+
+                    <span class="help">
+                        Example: ₹4,08,285
+                    </span>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="annualRate">
+                        Annual Interest Rate (%)
+                    </label>
+
+                    <input
+                        id="annualRate"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        value="17.49"
+                    >
+
+                    <span class="help">
+                        Example: 17.49% p.a.
+                    </span>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="tenure">
+                        Loan Tenure (Months)
+                    </label>
+
+                    <input
+                        id="tenure"
+                        type="number"
+                        min="1"
+                        value="60"
+                    >
+
+                    <span class="help">
+                        Example: 60 months = 5 years
+                    </span>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="interestMethod">
+                        Interest Calculation Method
+                    </label>
+
+                    <select id="interestMethod">
+
+                        <option value="reducing">
+                            Reducing Balance
+                        </option>
+
+                        <option value="flat">
+                            Flat / Fixed Rate
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="existingEmi">
+                        Existing EMI (Optional)
+                    </label>
+
+                    <input
+                        id="existingEmi"
+                        type="number"
+                        min="0"
+                        step="1"
+                        placeholder="Example: 10255"
+                    >
+
+                    <span class="help">
+                        Useful for comparing lender EMI
+                    </span>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="foreclosureRate">
+                        Foreclosure Charge (%)
+                    </label>
+
+                    <input
+                        id="foreclosureRate"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        value="4"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button onclick="calculateAll()">
+                    Calculate EMI
+                </button>
+
+                <button
+                    class="secondary"
+                    onclick="resetCalculator()">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SUMMARY
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                EMI & Loan Summary
+            </h2>
+
+            <div class="results-grid">
+
+                <div class="result">
+                    <div class="result-label">
+                        Monthly EMI
+                    </div>
+                    <div
+                        class="result-value"
+                        id="emiResult">
+                        ₹0
+                    </div>
+                </div>
+
+
+                <div class="result">
+                    <div class="result-label">
+                        Total Interest
+                    </div>
+                    <div
+                        class="result-value"
+                        id="interestResult">
+                        ₹0
+                    </div>
+                </div>
+
+
+                <div class="result">
+                    <div class="result-label">
+                        Total Repayment
+                    </div>
+                    <div
+                        class="result-value"
+                        id="paymentResult">
+                        ₹0
+                    </div>
+                </div>
+
+
+                <div class="result">
+                    <div class="result-label">
+                        Interest / Principal
+                    </div>
+                    <div
+                        class="result-value small-result"
+                        id="ratioResult">
+                        0%
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice"
+                id="existingEmiResult">
+                Enter an existing EMI to compare it with the calculated EMI.
+            </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             FLAT VS REDUCING
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                Flat Rate vs Reducing Balance Interest
+            </h2>
+
+            <p class="card-description">
+                A flat interest rate and a reducing-balance interest rate
+                should not be compared simply by looking at the quoted
+                percentage.
+            </p>
+
+
+            <div class="comparison-grid">
+
+                <div class="comparison-box">
+
+                    <h3>
+                        Reducing Balance EMI
+                    </h3>
+
+                    <p>
+                        Interest is calculated on the outstanding
+                        principal balance.
+                    </p>
+
+                    <p>
+                        As principal is repaid, the outstanding balance
+                        decreases and future interest generally decreases.
+                    </p>
+
+                    <p>
+                        This is commonly used for many modern loan products.
+                    </p>
+
+                </div>
+
+
+                <div class="comparison-box">
+
+                    <h3>
+                        Flat / Fixed Rate
+                    </h3>
+
+                    <p>
+                        Interest is typically calculated using the
+                        original principal for the agreed period.
+                    </p>
+
+                    <p>
+                        Therefore, a flat rate of 10% is not equivalent
+                        to a 10% reducing-balance rate.
+                    </p>
+
+                    <p>
+                        Always check the lender's agreement for the
+                        actual method and effective cost.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice"
+                id="methodComparison">
+                Calculate your loan to see the numerical comparison.
+            </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             PREPAYMENT
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                Loan Prepayment & Foreclosure Calculator
+            </h2>
+
+            <p class="card-description">
+                Simulate part-prepayments and early foreclosure to
+                estimate outstanding principal and potential interest savings.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label for="prepaymentMonth1">
+                        First Prepayment Month
+                    </label>
+
+                    <input
+                        id="prepaymentMonth1"
+                        type="number"
+                        min="0"
+                        value="12"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="prepaymentPercent">
+                        Prepayment (% of Outstanding)
+                    </label>
+
+                    <input
+                        id="prepaymentPercent"
+                        type="number"
+                        min="0"
+                        max="100"
+                        step="0.01"
+                        value="25"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="prepaymentMonth2">
+                        Second Prepayment Month
+                    </label>
+
+                    <input
+                        id="prepaymentMonth2"
+                        type="number"
+                        min="0"
+                        value="18"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="prepaymentMonth3">
+                        Third Prepayment Month
+                    </label>
+
+                    <input
+                        id="prepaymentMonth3"
+                        type="number"
+                        min="0"
+                        value="24"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="foreclosureMonth">
+                        Foreclosure Month
+                    </label>
+
+                    <input
+                        id="foreclosureMonth"
+                        type="number"
+                        min="1"
+                        value="30"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button onclick="calculatePrepayment()">
+                    Calculate Strategy
+                </button>
+
+            </div>
+
+
+            <br>
+
+
+            <div class="results-grid">
+
+                <div class="result">
+
+                    <div class="result-label">
+                        Outstanding at Foreclosure
+                    </div>
+
+                    <div
+                        class="result-value"
+                        id="foreclosureBalance">
+                        ₹0
+                    </div>
+
+                </div>
+
+
+                <div class="result">
+
+                    <div class="result-label">
+                        Foreclosure Charge
+                    </div>
+
+                    <div
+                        class="result-value"
+                        id="foreclosureCharge">
+                        ₹0
+                    </div>
+
+                </div>
+
+
+                <div class="result">
+
+                    <div class="result-label">
+                        Estimated Closure Amount
+                    </div>
+
+                    <div
+                        class="result-value"
+                        id="closureAmount">
+                        ₹0
+                    </div>
+
+                </div>
+
+
+                <div class="result">
+
+                    <div class="result-label">
+                        Estimated Interest Saved
+                    </div>
+
+                    <div
+                        class="result-value"
+                        id="savedInterest">
+                        ₹0
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice"
+                id="prepaymentMessage">
+                Prepayment results will appear here.
+            </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             AMORTIZATION
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                EMI Amortization Schedule
+            </h2>
+
+            <p class="card-description">
+                See exactly how each monthly EMI is divided between
+                interest and principal and how your outstanding loan
+                balance changes over time.
+            </p>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Month</th>
+
+                            <th>Opening Balance</th>
+
+                            <th>EMI</th>
+
+                            <th>Interest</th>
+
+                            <th>Principal</th>
+
+                            <th>Prepayment</th>
+
+                            <th>Closing Balance</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="scheduleBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SEO CONTENT
+        ==================================================== -->
+
+        <section class="card article">
+
+            <h2>
+                What Is an EMI?
+            </h2>
+
+            <p>
+                EMI stands for Equated Monthly Instalment. It is the
+                regular amount paid by a borrower toward a loan.
+                An EMI generally contains two components: principal
+                repayment and interest.
+            </p>
+
+            <p>
+                In a reducing-balance loan, the proportion of interest
+                and principal changes during the repayment period.
+                Earlier EMIs generally contain more interest because
+                the outstanding principal is higher.
+            </p>
+
+
+            <h2>
+                How Is EMI Calculated?
+            </h2>
+
+            <p>
+                For a standard reducing-balance loan, EMI can be
+                calculated using the following formula:
+            </p>
+
+            <div class="notice">
+                EMI = P × r × (1 + r)<sup>n</sup> /
+                ((1 + r)<sup>n</sup> − 1)
+            </div>
+
+            <p>
+                Where P is the principal loan amount, r is the monthly
+                interest rate and n is the total number of monthly
+                instalments.
+            </p>
+
+
+            <h2>
+                What Is Reducing Balance Interest?
+            </h2>
+
+            <p>
+                Under reducing-balance interest, interest is calculated
+                using the outstanding principal. When part of the
+                principal is repaid, the balance on which future
+                interest is calculated becomes smaller.
+            </p>
+
+
+            <h2>
+                What Is Flat Rate Interest?
+            </h2>
+
+            <p>
+                A typical flat-rate calculation applies the quoted
+                interest rate to the original principal rather than
+                recalculating interest on the declining outstanding
+                balance.
+            </p>
+
+            <p>
+                This means that a flat rate and a reducing rate with
+                the same numerical percentage can have very different
+                effective borrowing costs.
+            </p>
+
+
+            <h2>
+                Does Loan Prepayment Reduce Interest?
+            </h2>
+
+            <p>
+                For a reducing-balance loan, an earlier reduction in
+                principal can reduce future interest because future
+                interest is calculated on a smaller outstanding balance.
+            </p>
+
+            <p>
+                However, borrowers should check the loan agreement for
+                part-prepayment limits, minimum amounts, lock-in periods,
+                processing fees, taxes and applicable foreclosure charges.
+            </p>
+
+
+            <h2>
+                What Is Loan Foreclosure?
+            </h2>
+
+            <p>
+                Foreclosure means closing a loan before its original
+                scheduled maturity. The borrower normally pays the
+                eligible outstanding amount plus applicable charges
+                specified by the lender.
+            </p>
+
+            <p>
+                The actual foreclosure amount should always be confirmed
+                with the lender because the final amount can include
+                charges, taxes, interest up to the closure date or other
+                contractual amounts.
+            </p>
+
+
+            <h2>
+                Why Use an EMI Calculator?
+            </h2>
+
+            <ul>
+
+                <li>
+                    Estimate your monthly EMI before taking a loan.
+                </li>
+
+                <li>
+                    Calculate total interest over the loan period.
+                </li>
+
+                <li>
+                    Understand principal and interest in every EMI.
+                </li>
+
+                <li>
+                    Compare flat and reducing interest calculations.
+                </li>
+
+                <li>
+                    Estimate your outstanding loan balance.
+                </li>
+
+                <li>
+                    Calculate potential prepayment savings.
+                </li>
+
+                <li>
+                    Estimate an early foreclosure amount.
+                </li>
+
+                <li>
+                    View the complete loan amortization schedule.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ===================================================
+             FAQ
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                Frequently Asked Questions About EMI
+            </h2>
+
+
+            <details>
+
+                <summary>
+                    What is an EMI?
+                </summary>
+
+                <p>
+                    EMI means Equated Monthly Instalment. It is the
+                    regular payment made toward a loan and generally
+                    consists of principal and interest.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    What is the difference between flat and reducing interest?
+                </summary>
+
+                <p>
+                    Flat-rate interest is typically calculated using
+                    the original principal, whereas reducing-balance
+                    interest is calculated using the outstanding
+                    principal. Therefore, the same quoted percentage
+                    can produce different total interest costs.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Does prepayment reduce EMI?
+                </summary>
+
+                <p>
+                    It depends on the lender and the option selected.
+                    After a prepayment, a lender may reduce the EMI,
+                    reduce the remaining tenure, or provide another
+                    repayment structure according to the loan agreement.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Does keeping the EMI unchanged after prepayment save more interest?
+                </summary>
+
+                <p>
+                    In many reducing-balance loans, keeping the EMI
+                    unchanged can reduce the remaining tenure and
+                    therefore reduce future interest. The exact result
+                    depends on the lender's repayment rules.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    What is a loan amortization schedule?
+                </summary>
+
+                <p>
+                    An amortization schedule is a month-by-month
+                    breakdown showing opening balance, EMI, interest,
+                    principal repayment, prepayment and closing balance.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    How is foreclosure amount calculated?
+                </summary>
+
+                <p>
+                    A simplified estimate can be calculated as the
+                    eligible outstanding balance plus the applicable
+                    foreclosure charge. Actual lender calculations may
+                    include additional contractual charges, taxes or
+                    interest up to the closure date.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Is the 4% foreclosure charge always applicable?
+                </summary>
+
+                <p>
+                    No. A 4% value in this calculator is only an input
+                    assumption. Actual foreclosure charges depend on
+                    the lender, loan product, agreement, timing and
+                    applicable rules.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Is this EMI calculator accurate for every bank or NBFC?
+                </summary>
+
+                <p>
+                    The calculator provides mathematical estimates based
+                    on the values entered. Actual lender calculations can
+                    differ because of daily interest calculations, dates,
+                    fees, insurance, taxes, rounding, prepayment rules
+                    and other contractual conditions.
+                </p>
+
+            </details>
+
+        </section>
+
+
+        <!-- ===================================================
+             DISCLAIMER
+        ==================================================== -->
+
+        <section class="card">
+
+            <h2>
+                Important Loan Calculation Disclaimer
+            </h2>
+
+            <p class="article">
+                This calculator is provided for educational and estimation
+                purposes. It does not constitute financial advice.
+                Actual EMI, interest, outstanding balance, prepayment
+                amount and foreclosure amount may differ from the
+                calculator because lenders may use different calculation
+                methods, dates, rounding rules, fees, taxes, insurance,
+                contractual terms and applicable charges.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © <span id="year"></span> EMI Loan Calculator.
+        All calculations are estimates.
+
+    </footer>
+
+</div>
+
+
+<!-- ===========================================================
+     JAVASCRIPT
+=========================================================== -->
+
+<script>
+
+/* =============================================================
+   GLOBAL
+============================================================= */
+
+let normalLoanData = null;
+
+
+/* =============================================================
+   FORMAT INDIAN CURRENCY
+============================================================= */
+
+function money(value) {
+
+    if (!Number.isFinite(value)) {
+        value = 0;
+    }
+
+    return "₹" +
+        Math.round(value)
+        .toLocaleString("en-IN");
+
+}
+
+
+/* =============================================================
+   GET NUMBER
+============================================================= */
+
+function getNumber(id) {
+
+    const value =
+        parseFloat(
+            document.getElementById(id).value
+        );
+
+    return Number.isFinite(value)
+        ? value
+        : 0;
+
+}
+
+
+/* =============================================================
+   REDUCING BALANCE EMI
+============================================================= */
+
+function calculateReducingEMI(
+    principal,
+    annualRate,
+    months
+) {
+
+    if (months <= 0) {
+        return 0;
+    }
+
+    const monthlyRate =
+        annualRate / 12 / 100;
+
+    if (monthlyRate === 0) {
+        return principal / months;
+    }
+
+    return (
+        principal *
+        monthlyRate *
+        Math.pow(
+            1 + monthlyRate,
+            months
+        )
+    ) / (
+        Math.pow(
+            1 + monthlyRate,
+            months
+        ) - 1
+    );
+
+}
+
+
+/* =============================================================
+   FLAT RATE EMI
+============================================================= */
+
+function calculateFlatEMI(
+    principal,
+    annualRate,
+    months
+) {
+
+    if (months <= 0) {
+        return 0;
+    }
+
+    const years =
+        months / 12;
+
+    const totalInterest =
+        principal *
+        annualRate /
+        100 *
+        years;
+
+    return (
+        principal +
+        totalInterest
+    ) / months;
+
+}
+
+
+/* =============================================================
+   CREATE REDUCING SCHEDULE
+============================================================= */
+
+function createReducingSchedule(
+    principal,
+    annualRate,
+    months,
+    emi
+) {
+
+    const monthlyRate =
+        annualRate / 12 / 100;
+
+    let balance = principal;
+
+    let totalInterest = 0;
+
+    const schedule = [];
+
+
+    for (
+        let month = 1;
+        month <= months;
+        month++
+    ) {
+
+        const opening =
+            balance;
+
+        let interest =
+            opening *
+            monthlyRate;
+
+        let principalPaid =
+            emi - interest;
+
+
+        if (principalPaid > balance) {
+
+            principalPaid =
+                balance;
+
+        }
+
+
+        balance -=
+            principalPaid;
+
+
+        if (balance < 0.01) {
+
+            balance = 0;
+
+        }
+
+
+        totalInterest +=
+            interest;
+
+
+        schedule.push({
+
+            month,
+
+            opening,
+
+            emi,
+
+            interest,
+
+            principal:
+                principalPaid,
+
+            prepayment:
+                0,
+
+            closing:
+                balance
+
+        });
+
+
+        if (balance <= 0) {
+
+            break;
+
+        }
+
+    }
+
+
+    return {
+
+        schedule,
+
+        totalInterest,
+
+        totalPayment:
+            principal +
+            totalInterest
+
+    };
+
+}
+
+
+/* =============================================================
+   CREATE FLAT SCHEDULE
+============================================================= */
+
+function createFlatSchedule(
+    principal,
+    annualRate,
+    months,
+    emi
+) {
+
+    const monthlyInterest =
+        principal *
+        annualRate /
+        100 /
+        12;
+
+    let balance =
+        principal;
+
+    let totalInterest = 0;
+
+    const schedule = [];
+
+
+    for (
+        let month = 1;
+        month <= months;
+        month++
+    ) {
+
+        const opening =
+            balance;
+
+        let interest =
+            monthlyInterest;
+
+        let principalPaid =
+            emi - interest;
+
+
+        if (principalPaid > balance) {
+
+            principalPaid =
+                balance;
+
+        }
+
+
+        balance -=
+            principalPaid;
+
+
+        if (balance < 0.01) {
+
+            balance = 0;
+
+        }
+
+
+        totalInterest +=
+            interest;
+
+
+        schedule.push({
+
+            month,
+
+            opening,
+
+            emi,
+
+            interest,
+
+            principal:
+                principalPaid,
+
+            prepayment:
+                0,
+
+            closing:
+                balance
+
+        });
+
+
+        if (balance <= 0) {
+
+            break;
+
+        }
+
+    }
+
+
+    return {
+
+        schedule,
+
+        totalInterest,
+
+        totalPayment:
+            principal +
+            totalInterest
+
+    };
+
+}
+
+
+/* =============================================================
+   CALCULATE NORMAL LOAN
+============================================================= */
+
+function calculateLoan() {
+
+    const principal =
+        getNumber("loanAmount");
+
+    const annualRate =
+        getNumber("annualRate");
+
+    const months =
+        Math.round(
+            getNumber("tenure")
+        );
+
+    const method =
+        document.getElementById(
+            "interestMethod"
+        ).value;
+
+
+    if (
+        principal <= 0 ||
+        months <= 0 ||
+        annualRate < 0
+    ) {
+
+        alert(
+            "Please enter valid loan details."
+        );
+
+        return null;
+
+    }
+
+
+    let emi;
+
+
+    if (method === "reducing") {
+
+        emi =
+            calculateReducingEMI(
+                principal,
+                annualRate,
+                months
+            );
+
+    } else {
+
+        emi =
+            calculateFlatEMI(
+                principal,
+                annualRate,
+                months
+            );
+
+    }
+
+
+    let data;
+
+
+    if (method === "reducing") {
+
+        data =
+            createReducingSchedule(
+                principal,
+                annualRate,
+                months,
+                emi
+            );
+
+    } else {
+
+        data =
+            createFlatSchedule(
+                principal,
+                annualRate,
+                months,
+                emi
+            );
+
+    }
+
+
+    return {
+
+        principal,
+
+        annualRate,
+
+        months,
+
+        method,
+
+        emi,
+
+        totalInterest:
+            data.totalInterest,
+
+        totalPayment:
+            data.totalPayment,
+
+        schedule:
+            data.schedule
+
+    };
+
+}
+
+
+/* =============================================================
+   MAIN CALCULATION
+============================================================= */
+
+function calculateAll() {
+
+    const data =
+        calculateLoan();
+
+
+    if (!data) {
+        return;
+    }
+
+
+    normalLoanData =
+        data;
+
+
+    document.getElementById(
+        "emiResult"
+    ).textContent =
+        money(data.emi);
+
+
+    document.getElementById(
+        "interestResult"
+    ).textContent =
+        money(data.totalInterest);
+
+
+    document.getElementById(
+        "paymentResult"
+    ).textContent =
+        money(data.totalPayment);
+
+
+    const interestRatio =
+        data.totalInterest /
+        data.principal *
+        100;
+
+
+    document.getElementById(
+        "ratioResult"
+    ).textContent =
+        interestRatio.toFixed(2) +
+        "%";
+
+
+    compareExistingEMI(
+        data.emi
+    );
+
+
+    renderSchedule(
+        data.schedule
+    );
+
+
+    compareMethods(
+        data
+    );
+
+
+    calculatePrepayment();
+
+}
+
+
+/* =============================================================
+   EXISTING EMI COMPARISON
+============================================================= */
+
+function compareExistingEMI(
+    calculatedEMI
+) {
+
+    const existing =
+        getNumber("existingEmi");
+
+    const element =
+        document.getElementById(
+            "existingEmiResult"
+        );
+
+
+    if (existing <= 0) {
+
+        element.innerHTML =
+            "Enter an existing EMI to compare it with the calculated EMI.";
+
+        return;
+
+    }
+
+
+    const difference =
+        existing -
+        calculatedEMI;
+
+
+    if (Math.abs(difference) < 1) {
+
+        element.innerHTML =
+            "<b>Existing EMI:</b> " +
+            money(existing) +
+            "<br><b>Calculated EMI:</b> " +
+            money(calculatedEMI) +
+            "<br>The amounts are approximately the same.";
+
+    }
+
+    else if (difference > 0) {
+
+        element.innerHTML =
+            "<b>Existing EMI:</b> " +
+            money(existing) +
+            "<br><b>Calculated EMI:</b> " +
+            money(calculatedEMI) +
+            "<br>Your entered EMI is approximately " +
+            "<b>" +
+            money(difference) +
+            "</b> higher.";
+
+    }
+
+    else {
+
+        element.innerHTML =
+            "<b>Existing EMI:</b> " +
+            money(existing) +
+            "<br><b>Calculated EMI:</b> " +
+            money(calculatedEMI) +
+            "<br>Your entered EMI is approximately " +
+            "<b>" +
+            money(Math.abs(difference)) +
+            "</b> lower.";
+
+    }
+
+}
+
+
+/* =============================================================
+   COMPARE FLAT AND REDUCING
+============================================================= */
+
+function compareMethods(
+    currentData
+) {
+
+    const P =
+        currentData.principal;
+
+    const rate =
+        currentData.annualRate;
+
+    const months =
+        currentData.months;
+
+
+    const reducingEMI =
+        calculateReducingEMI(
+            P,
+            rate,
+            months
+        );
+
+
+    const flatEMI =
+        calculateFlatEMI(
+            P,
+            rate,
+            months
+        );
+
+
+    const reducing =
+        createReducingSchedule(
+            P,
+            rate,
+            months,
+            reducingEMI
+        );
+
+
+    const flat =
+        createFlatSchedule(
+            P,
+            rate,
+            months,
+            flatEMI
+        );
+
+
+    const difference =
+        flat.totalInterest -
+        reducing.totalInterest;
+
+
+    document.getElementById(
+        "methodComparison"
+    ).innerHTML =
+
+        "<b>Reducing Balance</b><br>" +
+
+        "EMI: " +
+        money(reducingEMI) +
+        "<br>" +
+
+        "Estimated interest: " +
+        money(reducing.totalInterest) +
+
+        "<br><br>" +
+
+        "<b>Flat Rate</b><br>" +
+
+        "EMI: " +
+        money(flatEMI) +
+        "<br>" +
+
+        "Estimated interest: " +
+        money(flat.totalInterest) +
+
+        "<br><br>" +
+
+        "Difference in estimated interest: " +
+
+        "<b>" +
+        money(Math.max(0, difference)) +
+        "</b>" +
+
+        "<br><br>" +
+
+        "<small>" +
+        "This comparison is mathematical only. " +
+        "Actual lender calculations may differ." +
+        "</small>";
+
+}
+
+
+/* =============================================================
+   RENDER SCHEDULE
+============================================================= */
+
+function renderSchedule(
+    schedule
+) {
+
+    const tbody =
+        document.getElementById(
+            "scheduleBody"
+        );
+
+
+    tbody.innerHTML = "";
+
+
+    schedule.forEach(
+        row => {
+
+            const tr =
+                document.createElement(
+                    "tr"
+                );
+
+
+            tr.innerHTML = `
+
+                <td>${row.month}</td>
+
+                <td>${money(row.opening)}</td>
+
+                <td>${money(row.emi)}</td>
+
+                <td>${money(row.interest)}</td>
+
+                <td>${money(row.principal)}</td>
+
+                <td>${money(row.prepayment)}</td>
+
+                <td>${money(row.closing)}</td>
+
+            `;
+
+
+            tbody.appendChild(tr);
+
+        }
+    );
+
+}
+
+
+/* =============================================================
+   PREPAYMENT STRATEGY
+============================================================= */
+
+function calculatePrepayment() {
+
+    if (!normalLoanData) {
+
+        normalLoanData =
+            calculateLoan();
+
+    }
+
+
+    if (!normalLoanData) {
+        return;
+    }
+
+
+    const P =
+        normalLoanData.principal;
+
+    const rate =
+        normalLoanData.annualRate;
+
+    const tenure =
+        normalLoanData.months;
+
+    const method =
+        normalLoanData.method;
+
+
+    const emi =
+        normalLoanData.emi;
+
+
+    const prepaymentMonths = [
+
+        Math.round(
+            getNumber(
+                "prepaymentMonth1"
+            )
+        ),
+
+        Math.round(
+            getNumber(
+                "prepaymentMonth2"
+            )
+        ),
+
+        Math.round(
+            getNumber(
+                "prepaymentMonth3"
+            )
+        )
+
+    ]
+    .filter(
+        month =>
+            month > 0 &&
+            month <= tenure
+    );
+
+
+    const prepaymentPercent =
+        Math.min(
+            100,
+            Math.max(
+                0,
+                getNumber(
+                    "prepaymentPercent"
+                )
+            )
+        );
+
+
+    const foreclosureMonth =
+        Math.round(
+            getNumber(
+                "foreclosureMonth"
+            )
+        );
+
+
+    if (
+        foreclosureMonth <= 0 ||
+        foreclosureMonth > tenure
+    ) {
+
+        alert(
+            "Foreclosure month must be between 1 and the loan tenure."
+        );
+
+        return;
+
+    }
+
+
+    let balance =
+        P;
+
+    let totalInterest =
+        0;
+
+    let totalPrepayment =
+        0;
+
+    const strategy = [];
+
+
+    const monthlyRate =
+        rate / 12 / 100;
+
+
+    for (
+        let month = 1;
+        month <= foreclosureMonth;
+        month++
+    ) {
+
+        if (balance <= 0) {
+            break;
+        }
+
+
+        const opening =
+            balance;
+
+
+        let interest;
+
+
+        if (method === "reducing") {
+
+            interest =
+                balance *
+                monthlyRate;
+
+        } else {
+
+            interest =
+                P *
+                monthlyRate;
+
+        }
+
+
+        let principalPaid =
+            emi -
+            interest;
+
+
+        if (principalPaid < 0) {
+
+            principalPaid = 0;
+
+        }
+
+
+        if (principalPaid > balance) {
+
+            principalPaid =
+                balance;
+
+        }
+
+
+        balance -=
+            principalPaid;
+
+
+        totalInterest +=
+            interest;
+
+
+        let prepayment =
+            0;
+
+
+        if (
+            prepaymentMonths.includes(
+                month
+            ) &&
+            balance > 0
+        ) {
+
+            prepayment =
+                balance *
+                prepaymentPercent /
+                100;
+
+
+            balance -=
+                prepayment;
+
+
+            totalPrepayment +=
+                prepayment;
+
+        }
+
+
+        if (balance < 0.01) {
+
+            balance = 0;
+
+        }
+
+
+        strategy.push({
+
+            month,
+
+            opening,
+
+            emi,
+
+            interest,
+
+            principal:
+                principalPaid,
+
+            prepayment,
+
+            closing:
+                balance
+
+        });
+
+    }
+
+
+    const foreclosureBalance =
+        balance;
+
+
+    const foreclosureRate =
+        getNumber(
+            "foreclosureRate"
+        );
+
+
+    const foreclosureCharge =
+        foreclosureBalance *
+        foreclosureRate /
+        100;
+
+
+    const finalClosure =
+        foreclosureBalance +
+        foreclosureCharge;
+
+
+    const normalInterest =
+        normalLoanData.totalInterest;
+
+
+    const estimatedSaving =
+        Math.max(
+            0,
+            normalInterest -
+            totalInterest
+        );
+
+
+    document.getElementById(
+        "foreclosureBalance"
+    ).textContent =
+        money(
+            foreclosureBalance
+        );
+
+
+    document.getElementById(
+        "foreclosureCharge"
+    ).textContent =
+        money(
+            foreclosureCharge
+        );
+
+
+    document.getElementById(
+        "closureAmount"
+    ).textContent =
+        money(
+            finalClosure
+        );
+
+
+    document.getElementById(
+        "savedInterest"
+    ).textContent =
+        money(
+            estimatedSaving
+        );
+
+
+    document.getElementById(
+        "prepaymentMessage"
+    ).innerHTML =
+
+        "Total simulated prepayments: " +
+        "<b>" +
+        money(totalPrepayment) +
+        "</b>" +
+
+        "<br>" +
+
+        "Estimated interest paid before foreclosure: " +
+        "<b>" +
+        money(totalInterest) +
+        "</b>" +
+
+        "<br><br>" +
+
+        "<b>Important:</b> " +
+        "The foreclosure amount shown is an estimate. " +
+        "Your lender may calculate interest, fees, taxes and " +
+        "prepayment charges differently.";
+
+    renderSchedule(
+        strategy
+    );
+
+}
+
+
+/* =============================================================
+   RESET
+============================================================= */
+
+function resetCalculator() {
+
+    document.getElementById(
+        "loanAmount"
+    ).value =
+        408285;
+
+
+    document.getElementById(
+        "annualRate"
+    ).value =
+        17.49;
+
+
+    document.getElementById(
+        "tenure"
+    ).value =
+        60;
+
+
+    document.getElementById(
+        "interestMethod"
+    ).value =
+        "reducing";
+
+
+    document.getElementById(
+        "existingEmi"
+    ).value =
+        "";
+
+
+    document.getElementById(
+        "foreclosureRate"
+    ).value =
+        4;
+
+
+    document.getElementById(
+        "prepaymentMonth1"
+    ).value =
+        12;
+
+
+    document.getElementById(
+        "prepaymentPercent"
+    ).value =
+        25;
+
+
+    document.getElementById(
+        "prepaymentMonth2"
+    ).value =
+        18;
+
+
+    document.getElementById(
+        "prepaymentMonth3"
+    ).value =
+        24;
+
+
+    document.getElementById(
+        "foreclosureMonth"
+    ).value =
+        30;
+
+
+    calculateAll();
+
+}
+
+
+/* =============================================================
+   YEAR
+============================================================= */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+/* =============================================================
+   AUTO CALCULATE
+============================================================= */
+
+calculateAll();
+
+
+/* =============================================================
+   ENTER KEY
+============================================================= */
+
+document.querySelectorAll(
+    "input, select"
+).forEach(
+    element => {
+
+        element.addEventListener(
+            "change",
+            () => {
+
+                calculateAll();
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
